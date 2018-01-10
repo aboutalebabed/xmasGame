@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="182 -194 282 929">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #95989a;
+      }
+    </style>
+  </defs>
+  <line id="Line_1" data-name="Line 1" class="cls-1" x1="2" y2="928" transform="translate(182.5 -193.5)"/>
+  <line id="Line_2" data-name="Line 2" class="cls-1" x2="279" transform="translate(184.5 -193.5)"/>
+  <line id="Line_3" data-name="Line 3" class="cls-1" y1="46" transform="translate(463.5 -193.5)"/>
+  <line id="Line_4" data-name="Line 4" class="cls-1" y1="46" x2="172" transform="translate(291.5 -147.5)"/>
+  <line id="Line_5" data-name="Line 5" class="cls-1" y2="111" transform="translate(291.5 -101.5)"/>
+  <line id="Line_6" data-name="Line 6" class="cls-1" x1="129" y1="111" transform="translate(291.5 9.5)"/>
+  <line id="Line_7" data-name="Line 7" class="cls-1" x1="6" y1="137" transform="translate(420.5 120.5)"/>
+  <line id="Line_8" data-name="Line 8" class="cls-1" y1="106" x2="143" transform="translate(280.5 257.5)"/>
+  <line id="Line_9" data-name="Line 9" class="cls-1" x1="6" y1="158" transform="translate(280.5 363.5)"/>
+  <line id="Line_10" data-name="Line 10" class="cls-1" x1="96" y1="108" transform="translate(286.5 521.5)"/>
+  <line id="Line_11" data-name="Line 11" class="cls-1" y1="80" transform="translate(382.5 629.5)"/>
+  <line id="Line_12" data-name="Line 12" class="cls-1" x2="199" transform="translate(183.5 734.5)"/>
+  <line id="Line_13" data-name="Line 13" class="cls-1" y2="30" transform="translate(382.5 704.5)"/>
+</svg>
