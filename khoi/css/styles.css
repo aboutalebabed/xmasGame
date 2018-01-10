@@ -1,0 +1,67 @@
+/* Common definitions */
+body{
+    background-image: url("../images/background_snow-man_1920.jpg");
+    background-size: 100%;
+}
+
+/* Definition for cursor */
+.cursor-gingerbread{
+    cursor: url("../images/gingerbread-man-icon.png"),default;
+}
+
+/* Definition for text */
+.text-main-title{
+    font-size: 50px;
+    color: #eeeeee;
+    font-weight: bold;
+}
+
+/* Definition for background of the game*/
+.svgPath{width: 0px;height: 0px;}
+.left-side{
+    -webkit-clip-path: url("#left-svgPath");
+    clip-path: url("#left-svgPath");
+}
+.right-side{
+    -webkit-clip-path: url("#right-svgPath");
+    clip-path: url("#right-svgPath");
+}
+
+
+/* Definition for snows */
+.snow{
+    width: 50px;
+    height: 50px;
+    fill: none;
+    stroke: #eeeeee;
+    position: relative;
+    z-index: 1;
+}
+
+.snow-move-1{
+    animation: kf-snow-move-1 20s steps(500) infinite;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation: kf-snow-move-1 20s steps(500) infinite;
+}
+@keyframes kf-snow-move-1{0%{top: 0px;}100%{top: 600px;}}
+@-webkit-keyframes kf-snow-move-1{0%{top: 0px;}100%{top: 600px;}}
+
+
+.snow-move-2{
+    animation: kf-snow-move-2 20s steps(500) infinite;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation: kf-snow-move-2 20s steps(500) infinite;
+}
+@keyframes kf-snow-move-2{0%{top: -50px;}100%{top: 600px;}}
+@-webkit-keyframes kf-snow-move-2{0%{top: -50px;}100%{top: 600px;}}
+
+.snow-move-3{
+    animation: kf-snow-move-3 20s steps(500) infinite;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation: kf-snow-move-3 20s steps(500) infinite;
+}
+@keyframes kf-snow-move-3{0%{top: 50px;}100%{top: 600px;}}
+@-webkit-keyframes kf-snow-move-3{0%{top: 50px;}100%{top: 600px;}}
