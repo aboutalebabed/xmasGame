@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XmasGame</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        $(document).ready(function(){
+            $("#svg-left-side").mouseover(function(){
+                alert("Left side");
+            });
+
+            $("#svg-right-side").mouseover(function () {
+                alert("Right side");
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <!-- Main title -->
+    <div class="row justify-content-center">
+        <div class="col-6 text-center">
+            <p class="text-main-title">XMAS GAME</p>
+        </div>
+    </div>
+
+    <!-- The game -->
+    <div class="row justify-content-center cursor-gingerbread">
+        <div class="col-6">
+
+            <svg id="svg-game-sides" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+                <defs></defs>
+                <title>XmasGame</title>
+                <path id="svg-left-side" class="svg-sides-style" d="M0,0,500,.5,363.89,214.74a37.56,37.56,0,0,0-3.83,8L295.4,412.33a71,71,0,0,0,.17,46.29l57.05,163.45a43.4,43.4,0,0,1-10,44.67L228.15,783.63a72.41,72.41,0,0,0-16,25.11L140,1000H0Z" transform="translate(0.5 0.5)"/>
+                <path id="svg-right-side" class="svg-sides-style" d="M720,0,579.65,212.23A59.7,59.7,0,0,0,573,225.6L507.91,413.16a63.45,63.45,0,0,0,.33,42.56l59.91,164.17a54.25,54.25,0,0,1-5.63,48.39L437.77,858a65,65,0,0,0-8.91,20.65L400,1000H800V0Z" transform="translate(0.5 0.5)"/>
+            </svg>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
