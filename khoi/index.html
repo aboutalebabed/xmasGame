@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XmasGame</title>
+
+    <!-- Include Bootstrap's libraries - version 4.0 beta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/web-addons.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <!-- Snow -->
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <!-- Snow 1-->
+            <svg id="snow-1" class="snow snow-move-1 mr-5" xmlns="http://www.w3.org/2000/svg" viewBox="375.351 113.371 47.269 46.42">
+                <path id="snow-path-1" data-name="snow-path-1" class="cls-1" d="M391.813,116.557v11.761l-12.458-4.6L376,133.432l15.813,4.091-12.458,11.761L391.813,159l6.229-14.318L410.5,159l7.667-9.716-12.937-11.761L422,133.432l-3.833-13.807-15.333,8.693V114Z"/>
+            </svg>
+
+            <!-- Snow 2-->
+            <svg id="snow-2" class="snow snow-move-2 mr-5" xmlns="http://www.w3.org/2000/svg" viewBox="375.351 113.371 47.269 46.42">
+                <path id="snow-path-2" data-name="snow-path-2" class="cls-1" d="M391.813,116.557v11.761l-12.458-4.6L376,133.432l15.813,4.091-12.458,11.761L391.813,159l6.229-14.318L410.5,159l7.667-9.716-12.937-11.761L422,133.432l-3.833-13.807-15.333,8.693V114Z"/>
+            </svg>
+
+            <!-- Snow 3-->
+            <svg id="snow-3" class="snow snow-move-3" xmlns="http://www.w3.org/2000/svg" viewBox="375.351 113.371 47.269 46.42">
+                <path id="snow-path-3" data-name="snow-path-3" class="cls-1" d="M391.813,116.557v11.761l-12.458-4.6L376,133.432l15.813,4.091-12.458,11.761L391.813,159l6.229-14.318L410.5,159l7.667-9.716-12.937-11.761L422,133.432l-3.833-13.807-15.333,8.693V114Z"/>
+            </svg>
+
+        </div>
+    </div>
+
+    <!-- Main title -->
+    <div class="row justify-content-center">
+        <div class="col-4 text-center">
+            <p class="text-main-title">XMAS GAME</p>
+        </div>
+    </div>
+
+    <!-- Main game -->
+    <div class="row justify-content-center cursor-gingerbread">
+
+        <!--Left side-->
+        <div class="col-3 text-right container-full-width">
+            <img src="images/background_snow-way-left.jpg" alt="Left side" class="left-side">
+            <svg class="svgPath">
+                <defs>
+                    <clipPath id="left-svgPath">
+                        <path id="Path_1" data-name="Path 1" class="cls-1" d="M 0 0 V 500 L 200 250 L 250 0 z"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+
+        <!--Right side-->
+        <div class="col-3 container-full-width">
+            <img src="images/background_snow-way-right.jpg" alt="Right side" class="right-side">
+            <svg class="svgPath">
+                <defs>
+                    <clipPath id="right-svgPath">
+                        <path id="Path_1" data-name="Path 1" class="cls-1" d="M 100 250 L 0 500 H 250 V 0 H 150 z"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
