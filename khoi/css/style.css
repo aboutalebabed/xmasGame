@@ -1,0 +1,21 @@
+body{background-color: #000000;}
+
+.cursor-gingerbread{cursor: url("../images/icon-gingerbread-man.png"),default;}
+
+.text-main-title{font-size: 50px;color: #eeeeee;font-weight: bold;}
+
+.svg-sides-style{fill:#fff;stroke:#000;stroke-miterlimit:50;}
+.svg-sides-style:hover{fill: #ff0000;}
+
+
+.svg-sides{
+    position: relative;
+
+    animation-name: sidesmove;
+    animation-duration: 20s;
+    animation-fill-mode: forwards;
+}
+@keyframes sidesmove{
+    0%   {top: -800px;}
+    100% {top: 600px;}
+}
