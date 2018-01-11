@@ -8,7 +8,7 @@ body{background-color: #000000;}
 .svg-sides-style:hover{fill: #ff0000;}
 
 
-.svg-sides{
+#svg-game-sides{
     position: relative;
 
     animation-name: sidesmove;
