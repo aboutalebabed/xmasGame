@@ -147,7 +147,6 @@ h1 {
 /* Game Path Animation */
 #svg-game-sides{
     position: relative;
-
     -webkit-animation: pathAnimation 20s linear forwards;
     -moz-animation: pathAnimation 20s linear forwards;
     -ms-animation: pathAnimation 20s linear forwards;
