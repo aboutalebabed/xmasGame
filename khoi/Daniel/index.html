@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>The Xmas Game</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="css/actions.css">
-	<script src="js/jquery-3.2.1.min.js"></script>
+
 	<script type="text/javascript">
         $(document).ready(function(){
 			$("path").mouseenter(function () {
-				$("#lose-message").show();
+				$("#lose-box").show();
             });
 
-			$("#btn-playgame").click(function () {
+			$("#button-playgame").click(function () {
                 $("html, body").animate({ scrollTop: 0 }, 30000);
                 return false;
             });
 
+			$("#button-playagain").click(function () {
+                $("#lose-box").hide();
+                $("html, body").animate({ scrollTop: 4000 }, 3000);
+                return false;
+            });
         });
 	</script>
 
@@ -92,11 +102,14 @@
 
 </div>
 
-
 <!-- Messages -->
-<div id="lose-message">YOU LOSE!</div>
+<div id="lose-box" class="lose-box">
+	<p class="lose-message">YOU LOSE!</p>
+	<button id="button-playagain" class="button button-playagain">Play again!</button>
+</div>
+
 <div id="playgame">
-	<button id="btn-playgame" class="button btn-playgame">Play now!</button>
+	<button id="button-playgame" class="button button-playgame">Play now!</button>
 </div>
 
 
