@@ -9,18 +9,35 @@
     <script src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript">
         $(document).ready(function(){
+
+            //When the player lose the game
 			$("path").mouseenter(function () {
 				$("#lose-box").show();
+                $('html,body').stop();
             });
 
+			//The player begin the game
 			$("#button-playgame").click(function () {
                 $("html, body").animate({ scrollTop: 0 }, 30000);
                 return false;
             });
 
+			//The player play again
 			$("#button-playagain").click(function () {
                 $("#lose-box").hide();
-                $("html, body").animate({ scrollTop: 4000 }, 3000);
+                $("html, body").animate({ scrollTop: 4000 }, 0);
+                return false;
+            });
+
+			//When the player win the game
+			$("#finish-line").mouseenter(function () {
+                $("#win-box").show();
+            });
+
+			//The player play one more time
+			$("#button-playmore").click(function () {
+                $("#win-box").hide();
+                $("html, body").animate({ scrollTop: 4000 }, 0);
                 return false;
             });
         });
@@ -62,6 +79,8 @@
 
 			<!-- Obstacles on Path -->
 			<g id="Obstacles">
+					<image id="finish-line" style="overflow:visible;" width="600" height="400" xlink:href="images/finish-line.png"  transform="matrix(0.24 0 0 0.24 340 110)"></image>
+
 					<image style="overflow:visible;" width="200" height="230" xlink:href="images/obstacle.png"  transform="matrix(0.24 0 0 0.24 359 410)"></image>
 					<image style="overflow:visible;" width="200" height="230" xlink:href="images/obstacle.png"  transform="matrix(0.24 0 0 0.24 275 612)"></image>
 					<image style="overflow:visible;" width="200" height="230" xlink:href="images/obstacle.png"  transform="matrix(0.24 0 0 0.24 384 1308)"></image>
@@ -99,9 +118,14 @@
 </div>
 
 <!-- Messages -->
-<div id="lose-box" class="lose-box">
+<div id="lose-box" class="message-box">
 	<p class="lose-message">YOU LOSE!</p>
 	<button id="button-playagain" class="button button-playagain">Play again!</button>
+</div>
+
+<div id="win-box" class="message-box">
+	<p class="win-message">YOU WIN!</p>
+	<button id="button-playmore" class="button button-playmore">Play one more time!</button>
 </div>
 
 <div id="playgame">
