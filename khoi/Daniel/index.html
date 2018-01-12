@@ -9,15 +9,25 @@
     <script src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript">
         $(document).ready(function(){
+			//Declare own functions and global variables
+			var startPlay = 0;
+			function moveToStartLine(){
+                $("html, body").animate({ scrollTop: 4000 }, 0);
+                return false;
+			}
 
             //When the player lose the game
 			$("path").mouseenter(function () {
-				$("#lose-box").show();
-                $('html,body').stop();
+			    if (startPlay == 1){
+                    $("#lose-box").show();
+                    $('html,body').stop();
+				}
+                startPlay = 0;
             });
 
 			//The player begin the game
 			$("#button-playgame").click(function () {
+                startPlay = 1;
                 $("html, body").animate({ scrollTop: 0 }, 30000);
                 return false;
             });
@@ -25,19 +35,22 @@
 			//The player play again
 			$("#button-playagain").click(function () {
                 $("#lose-box").hide();
-                $("html, body").animate({ scrollTop: 4000 }, 0);
+                moveToStartLine();
                 return false;
             });
 
 			//When the player win the game
 			$("#finish-line").mouseenter(function () {
-                $("#win-box").show();
+			    if (startPlay == 1){
+                    $("#win-box").show();
+				}
+                startPlay = 0;
             });
 
 			//The player play one more time
 			$("#button-playmore").click(function () {
                 $("#win-box").hide();
-                $("html, body").animate({ scrollTop: 4000 }, 0);
+                moveToStartLine();
                 return false;
             });
         });
