@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Xmas Game</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/actions.css">
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function(){
+			//Declare own functions and global variables
+			var startPlay = 0;
+			function moveToStartLine(){
+                $("html, body").animate({ scrollTop: 4000 }, 0);
+                return false;
+			}
+			function runTheGame(){
+                startPlay = 1;
+                $("html, body").animate({ scrollTop: 0 }, 30000);
+                return false;
+			}
+			function winTheGame() {
+                if (startPlay == 1){
+                    $("#win-box").show();
+                }
+                startPlay = 0;
+            }
+            function loseTheGame() {
+                if (startPlay == 1){
+                    $("#lose-box").show();
+                    $('html,body').stop();
+                }
+                startPlay = 0;
+            }
+
+            //When the player lose the game
+			$("path").mouseenter(function () {
+                loseTheGame();
+            });
+
+			//The player begin the game
+			$("#button-playgame").click(function () {
+			    $("#counter").show();
+			    setTimeout(function () {$("#counter_content").text("3");},1000);
+                setTimeout(function () {$("#counter_content").text("2");},2000);
+                setTimeout(function () {$("#counter_content").text("1");},3000);
+                setTimeout(function () {$("#counter_content").text("GO!");},4000);
+                setTimeout(function () {
+                    $("#counter_content").text("");//Clear all content in div
+                    $("#counter").hide();
+                    runTheGame();
+				},5000);
+			});
+
+			//The player play again
+			$("#button-playagain").click(function () {
+                $("#lose-box").hide();
+                moveToStartLine();
+                return false;
+            });
+
+			//When the player win the game
+			$("#finish-line").mouseenter(function () {
+			    winTheGame();
+            });
+
+			//The player play one more time
+			$("#button-playmore").click(function () {
+                $("#win-box").hide();
+                moveToStartLine();
+                return false;
+            });
+        });
+	</script>
+
+</head>
+
+<body>
+
+<div id="SnowingEffect">
+	<h1>The Xmas Game</h1>
+
+	<div id="game-container">
+
+		<?xml version="1.0" encoding="utf-8"?>
+		<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="800px"
+		 height="4000px" viewBox="0 0 800 4000" style="enable-background:new 0 0 800 4000;" xml:space="preserve">
+
+			<!-- Left and Right side Snow -->
+			<g id="Left">
+				<path class="pathSnow" d="M0,140.8c60.2-8.6,138.4-19.4,198.1-8.3s118,45.9,137.6,99.5c20.6,56.3-5.3,118-37.8,169.2
+					s-73.1,100.3-85.1,158.7C191.3,664.2,265,762.7,333.1,848s138.1,187.9,108.3,290.5c-24.1,83-105.8,137.6-175,194.5
+					c-69.1,57-134.7,138.6-110.5,221.6c9.7,33.3,33,61.6,55,89.4c49.5,62.5,96.1,128.8,118.9,203.4s19.2,159.5-26.7,224.3
+					c-23.2,32.8-55.8,58.8-81.2,90.1c-27.1,33.4-45.9,72.6-54.3,113.7c-8.9,43.2-1.1,96.6,40.9,117c80.4,39,175.6,59.7,226.1,129.8
+					c34.3,47.7,30.5,112.2,6.5,165.1s-65.4,96.9-105.1,140.8c-45.4,50.2-89.9,102.1-119.5,161.7s-43.3,128.2-24.7,191.5
+					c37.4,127.6,190.2,199.2,242.1,322.4c16.5,39.3,21.8,82,21.6,124.2c-0.1,19.2-1.4,38.8-9.3,56.5c-18.7,42.2-69.4,63.8-117.5,73.2
+					c-108.2,21.3-220.3,1.2-328.7-18.9"/>
+			</g>
+			<g id="Right">
+				<path class="pathSnow" d="M800,134c31.3,0-130.1-1-170.4-5.2c-40.3-4.1-85.9,2-112.2,38c-16,21.9-22.1,51.1-26.2,79.5
+					c-6.4,43.7-9.3,88.2-8.8,132.5c0.5,45.3,3.5,95.2-20.5,130.7c-11.5,17-28.1,28.6-40.1,45.1c-30.3,41.4-25.6,105.2-5.5,154.4
+					s52.9,89.6,77.5,135.9c57.8,108.5,67.9,242.3,65.1,370.1c-0.5,24.1-1.5,48.5-7.4,71.6c-21.1,82.6-98.6,129-129,207.5
+					c-23,59.4-14.8,132.7,17.7,185.7c18.4,30.1,43.5,53.8,62.9,82.9c23.4,35.1,38.1,78.1,41.9,122.4c6.5,76.4-49,151.7-84.4,216.4
+					c-24.3,44.2-53.9,87.9-58.6,140.1c-5,55.3,19.4,108.7,49,152.3c29.5,43.6,65.1,82.1,89,130.3c12.4,25.1,21.5,52.5,26.7,80.8
+					c20.7,112.9-20.3,228.6-70.4,328.1c-39.9,79.3-88.3,165.7-71.8,255.7c19.3,105.4,121.4,170.4,137.1,276.6
+					c12.3,83.3-11.2,181.3,23.6,255.4c4.9,10.4,11,20.2,19.5,26.7c7.2,5.5,15.6,8.2,23.9,10.5c50.1,14,121,13.4,171.6,2.1"/>
+			</g>
+
+			<!-- Obstacles on Path -->
+			<g id="Obstacles">
+					<image id="finish-line" style="overflow:visible;" width="600" height="400" xlink:href="images/finish-line.png"  transform="matrix(0.24 0 0 0.24 340 110)"></image>
+
+					<image style="overflow:visible;" width="200" height="230" xlink:href="images/obstacle.png"  transform="matrix(0.24 0 0 0.24 359 410)"></image>
+					<image style="overflow:visible;" width="200" height="230" xlink:href="images/obstacle.png"  transform="matrix(0.24 0 0 0.24 275 612)"></image>
+					<image style="overflow:visible;" width="200" height="230" xlink:href="images/obstacle.png"  transform="matrix(0.24 0 0 0.24 384 1308)"></image>
+					<image style="overflow:visible;" width="200" height="230" xlink:href="images/obstacle.png"  transform="matrix(0.24 0 0 0.24 258.4885 1466)"></image>
+					<image style="overflow:visible;" width="200" height="230" xlink:href="images/obstacle.png"  transform="matrix(0.24 0 0 0.24 352 1636)"></image>
+					<image style="overflow:visible;" width="200" height="230" xlink:href="images/obstacle.png"  transform="matrix(0.24 0 0 0.24 411.8274 1864)"></image>
+					<image style="overflow:visible;" width="200" height="230" xlink:href="images/obstacle.png"  transform="matrix(0.24 0 0 0.24 227 2235.9082)"></image>
+					<image style="overflow:visible;" width="200" height="230" xlink:href="images/obstacle.png"  transform="matrix(0.24 0 0 0.24 352 2330)"></image>
+					<image style="overflow:visible;" width="200" height="230" xlink:href="images/obstacle.png"  transform="matrix(0.24 0 0 0.24 363.6586 2876)"></image>
+					<image style="overflow:visible;" width="200" height="230" xlink:href="images/obstacle.png"  transform="matrix(0.24 0 0 0.24 240 3105)"></image>
+					<image style="overflow:visible;" width="200" height="230" xlink:href="images/obstacle.png"  transform="matrix(0.24 0 0 0.24 376 3233.604)"></image>
+			</g>
+
+			<!-- Christmastrees and Raindeers on Snow -->
+			<g id="Trees_and_Raindeers">
+					<image style="overflow:visible;" width="429" height="600" xlink:href="images/raindeer.png"  transform="matrix(0.1816 0 0 0.1816 110.6049 279.0569)"></image>
+					<image style="overflow:visible;" width="429" height="600" xlink:href="images/raindeer.png"  transform="matrix(0.1816 0 0 0.1816 204.5844 1033.0293)"></image>
+					<image style="overflow:visible;" width="429" height="600" xlink:href="images/raindeer.png"  transform="matrix(0.1816 0 0 0.1816 91.6021 1768.0466)"></image>
+					<image style="overflow:visible;" width="429" height="600" xlink:href="images/raindeer.png"  transform="matrix(0.1816 0 0 0.1816 73.557 2576.5493)"></image>
+					<image style="overflow:visible;" width="429" height="600" xlink:href="images/raindeer.png"  transform="matrix(0.1816 0 0 0.1816 73.557 3481.0457)"></image>
+					<image style="overflow:visible;" width="429" height="600" xlink:href="images/raindeer.png"  transform="matrix(-0.1816 0 0 0.1816 721.9678 644.2021)"></image>
+					<image style="overflow:visible;" width="429" height="600" xlink:href="images/raindeer.png"  transform="matrix(-0.1816 0 0 0.1816 707.9374 1484.0177)"></image>
+					<image style="overflow:visible;" width="429" height="600" xlink:href="images/raindeer.png"  transform="matrix(-0.1816 0 0 0.1816 707.9374 2182.1514)"></image>
+					<image style="overflow:visible;" width="429" height="600" xlink:href="images/raindeer.png"  transform="matrix(-0.1816 0 0 0.1816 706.4375 3063.7112)"></image>
+					<image style="overflow:visible;" width="283" height="400" xlink:href="images/ChristmasTree.png"  transform="matrix(0.5916 0 0 0.5916 580.9731 179.1815)"></image>
+					<image style="overflow:visible;" width="283" height="400" xlink:href="images/ChristmasTree.png"  transform="matrix(0.5916 0 0 0.5916 606.4423 1758.6763)"></image>
+					<image style="overflow:visible;" width="283" height="400" xlink:href="images/ChristmasTree.png"  transform="matrix(0.5916 0 0 0.5916 196.2256 2505.2068)"></image>
+					<image style="overflow:visible;" width="283" height="400" xlink:href="images/ChristmasTree.png"  transform="matrix(0.5916 0 0 0.5916 615.611 3279.2041)"></image>
+					<image style="overflow:visible;" width="283" height="400" xlink:href="images/ChristmasTree.png"  transform="matrix(0.5916 0 0 0.5916 615.611 1162.5188)"></image>
+			</g>
+		</svg>
+
+	</div>
+
+</div>
+
+<!-- Messages -->
+<div id="lose-box" class="message-box">
+	<p class="lose-message">YOU LOSE!</p>
+	<button id="button-playagain" class="button button-playagain">Play again!</button>
+</div>
+
+<div id="win-box" class="message-box">
+	<p class="win-message">YOU WIN!</p>
+	<button id="button-playmore" class="button button-playmore">Play one more time!</button>
+</div>
+
+<div id="playgame">
+	<button id="button-playgame" class="button button-playgame">Play now!</button>
+</div>
+
+<div id="counter" class="message-box">
+	<p id="counter_content" class="counter-message"></p>
+</div>
+
+
+</body>
+</html>
