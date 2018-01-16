@@ -54,7 +54,9 @@ h1 {
     height: 600px;
     overflow: hidden;
     cursor: url('../images/cursor.png'),auto;
+}
 
+.viewAs3D{
     -webkit-transform: perspective(300px) rotateX(15deg) translateY(-90px);
     transform: perspective(300px) rotateX(15deg) translateY(-90px);
     /*The perspective CSS property gives an element a 3D-space by affecting the distance between the Z plane and the user. (css-tricks.com)*/
