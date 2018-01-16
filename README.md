@@ -14,11 +14,11 @@
 - [How to developers organize their projects locally?](https://www.quora.com/How-do-developers-organize-their-projects-locally)
 - [How should I organize my source tree?](https://softwareengineering.stackexchange.com/questions/81899/how-should-i-organize-my-source-tree)
 
-# Software versioning
+## Software versioning
 - [Software versioning](https://en.wikipedia.org/wiki/Software_versioning)
 - [What version naming convention do you use?](https://softwareengineering.stackexchange.com/questions/3199/what-version-naming-convention-do-you-use)
 
-# The product vision
+## The product vision
 - [The Product Vision](https://www.scrumalliance.org/community/articles/2009/january/the-product-vision)
 - [8 tips for creating a compelling product vision](https://www.romanpichler.com/blog/tips-for-writing-compelling-product-vision/)
 - [Four steps to defining your product vision with Agile management](http://www.dummies.com/careers/project-management/four-steps-to-defining-your-product-vision-with-agile-management/)
