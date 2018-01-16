@@ -14,3 +14,7 @@
 - [How To Keep Your Coding Workflow Organized](https://www.smashingmagazine.com/2011/01/cleaning-up-the-mess-how-to-keep-your-coding-workflow-organized/)
 - [How to developers organize their projects locally?](https://www.quora.com/How-do-developers-organize-their-projects-locally)
 - [How should I organize my source tree?](https://softwareengineering.stackexchange.com/questions/81899/how-should-i-organize-my-source-tree)
+
+# Software versioning
+- [Software versioning](https://en.wikipedia.org/wiki/Software_versioning)
+- [What version naming convention do you use?](https://softwareengineering.stackexchange.com/questions/3199/what-version-naming-convention-do-you-use)
