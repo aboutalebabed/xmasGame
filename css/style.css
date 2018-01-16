@@ -1,7 +1,7 @@
 body {
     margin: 0 auto;
     padding: 0;
-    background:url("images/bg.jpg");
+    background:url("../images/bg.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -10,7 +10,7 @@ body {
 
 /* Snowing Effects */
 #snowingEffect {
-    background-image: url('images/snow/snow1.png'), url('images/snow/snow2.png'), url('images/snow/snow3.png');
+    background-image: url('../images/snow/snow1.png'), url('../images/snow/snow2.png'), url('../images/snow/snow3.png');
     -webkit-animation: snow 5s linear infinite;
     -moz-animation: snow 5s linear infinite;
     -ms-animation: snow 5s linear infinite;
@@ -54,7 +54,7 @@ h1 {
     width: 800px;
     height: 500px;
     overflow: hidden;
-    //cursor: url('images/cursor.png'),auto; /* Need to fix cursor, to big and touches everything on map */
+    cursor: url('../images/cursor.png'),auto; /* Need to fix cursor, to big and touches everything on map */
 }
 
 /* Map Snow Styles */
