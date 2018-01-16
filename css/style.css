@@ -6,6 +6,8 @@ body {
     background-attachment: fixed;
     background-position: center;
     color: #fff;
+
+    font-family: Arial;
 }
 
 /* Snowing Effects */
@@ -22,18 +24,15 @@ body {
     0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
     100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
 }
-
 @-moz-keyframes snow {
     0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
     100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
 }
-
 @-webkit-keyframes snow {
     0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
     50% {background-color:#b4cfe0;}
     100% {background-position: 500px 1000px, 400px 400px, 300px 300px; background-color:#6b92b9;}
 }
-
 @-ms-keyframes snow {
     0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
     100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
@@ -52,9 +51,13 @@ h1 {
     background-color: #8c8c8c;
     margin: 0 auto;
     width: 800px;
-    height: 500px;
+    height: 600px;
     overflow: hidden;
-    cursor: url('../images/cursor.png'),auto; /* Need to fix cursor, to big and touches everything on map */
+    cursor: url('../images/cursor.png'),auto;
+
+    -webkit-transform: perspective(300px) rotateX(15deg) translateY(-90px);
+    transform: perspective(300px) rotateX(15deg) translateY(-90px);
+    /*The perspective CSS property gives an element a 3D-space by affecting the distance between the Z plane and the user. (css-tricks.com)*/
 }
 
 /* Map Snow Styles */
@@ -75,7 +78,6 @@ h1 {
     -ms-animation: pathAnimation 20s linear forwards;
     animation: pathAnimation 20s linear forwards;
 }
-
 @keyframes pathAnimation {
     0%   {top: -3500px;}
     100% {top: 1px;}
@@ -89,15 +91,9 @@ h1 {
     -ms-animation: startPointMover forwards;
     animation: startPointMover forwards;
 }
-
 @keyframes startPointMover {
     100%   {top: -3500px;}
 }
-
-
-
-
-
 
 .message-box{
     display: none;
@@ -112,14 +108,12 @@ h1 {
     background: rgba(0,0,0,0.8);
     z-index: 10000;
 }
-
 .messageText {
     margin: 160px 0 50px 0;
     text-align: center;
     font-weight: bolder;
     font-size: 100px;
 }
-
 .lose { color: #ff0000;}
 .win { color: #1e7e34;}
 .counter {color: #008CBA;}
@@ -138,21 +132,17 @@ h1 {
     cursor: pointer;
     border: 2px solid #333333;
 }
-
 .loseButton {
     background-color: #f44336;
     color: #000000;
 }
-
 .winButton{
     background-color: #1e7e34;
     color: #000000;
 }
-
 .loseButton:hover, .winButton:hover{
     background-color: #ccc;
 }
-
 
 .counter-message{
     margin-top: 100px;
