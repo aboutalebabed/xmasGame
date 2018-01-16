@@ -1,7 +1,6 @@
 # The Xmas Game
 - [View online demo](https://aboutalebabed.github.io/xmasGame/)
-
-## [Slack](https://ec-scrum-groupproject.slack.com/messages)
+- [Slack](https://ec-scrum-groupproject.slack.com/messages)
 
 ## How should I name my variables in programming?
 - [Naming convention (programming)](https://en.wikipedia.org/wiki/Naming_convention_(programming))
