@@ -12,11 +12,13 @@ body {
 
 /* Snowing Effects */
 #snowingEffect {
+    height: 100vh!important;
     background-image: url('../images/snow/snow1.png'), url('../images/snow/snow2.png'), url('../images/snow/snow3.png');
     -webkit-animation: snow 5s linear infinite;
     -moz-animation: snow 5s linear infinite;
     -ms-animation: snow 5s linear infinite;
     animation: snow 5s linear infinite;
+
 }
 
 /*Keyframes Cross Browser Snowing Animation*/
