@@ -31,6 +31,8 @@ $(document).ready(function(){
         if (startPlay == 1){
             $("#lose-box").show();
             $(".path-animation").css("animation-play-state", "paused");
+            var audio = new Audio('sound/error-sound.mp3');
+            audio.play();
         }
         startPlay = 0;
     });
@@ -39,6 +41,8 @@ $(document).ready(function(){
     $("#finish-line").mouseenter(function () {
         if (startPlay == 1){
             $("#win-box").show();
+            var audio = new Audio('sound/win-sound.mp3');
+            audio.play();
         }
     });
 });
