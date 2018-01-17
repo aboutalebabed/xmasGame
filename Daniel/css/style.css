@@ -181,13 +181,14 @@ h1 {
 /* Scores */
 #scoreBox {
     position: absolute;
-    width: 75px;
+    width: 84px;
     height: 25px;
     right: 0;
     bottom: 0;
     margin: 20px;
     background-color: #333333;
     z-index: 1;
+    display: none;
 }
 
 #scoreBox p {
