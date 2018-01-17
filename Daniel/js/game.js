@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    var startPlay = 0;
+    var startPlay = 0, score = 0;
 
     //The Start Countdown
     $("#start-line").one("mouseenter", function() {
@@ -52,79 +52,75 @@ $(document).ready(function(){
 
 
     // Game Score
-
-    var score = 0;
-
     $("#presentOne").mouseenter(function () {
         if (startPlay == 1){
             $('#presentOne').hide();
             score++;
-            $('.myScore').html(score+" / 10");
+            $('.myScore').html(score+"/10");
         }
     });
     $("#presentTwo").mouseenter(function () {
         if (startPlay == 1){
             $('#presentTwo').hide();
             score++;
-            $('.myScore').html(score+" / 10");
+            $('.myScore').html(score+"/10");
         }
     });
     $("#presentThree").mouseenter(function () {
         if (startPlay == 1){
             $('#presentThree').hide();
             score++;
-            $('.myScore').html(score+" / 10");
+            $('.myScore').html(score+"/10");
         }
     });
     $("#presentFour").mouseenter(function () {
         if (startPlay == 1){
             $('#presentFour').hide();
             score++;
-            $('.myScore').html(score+" / 10");
+            $('.myScore').html(score+"/10");
         }
     });
     $("#presentFive").mouseenter(function () {
         if (startPlay == 1){
             $('#presentFive').hide();
             score++;
-            $('.myScore').html(score+" / 10");
+            $('.myScore').html(score+"/10");
         }
     });
     $("#presentSix").mouseenter(function () {
         if (startPlay == 1){
             $('#presentSix').hide();
             score++;
-            $('.myScore').html(score+" / 10");
+            $('.myScore').html(score+"/10");
         }
     });
     $("#presentSeven").mouseenter(function () {
         if (startPlay == 1){
             $('#presentSeven').hide();
             score++;
-            $('.myScore').html(score+" / 10");
+            $('.myScore').html(score+"/10");
         }
     });
     $("#presentEight").mouseenter(function () {
         if (startPlay == 1){
             $('#presentEight').hide();
             score++;
-            $('.myScore').html(score+" / 10");
+            $('.myScore').html(score+"/10");
         }
     });
     $("#presentNine").mouseenter(function () {
         if (startPlay == 1){
             $('#presentNine').hide();
             score++;
-            $('.myScore').html(score+" / 10");
+            $('.myScore').html(score+"/10");
         }
     });
+
     $("#presentTen").mouseenter(function () {
         if (startPlay == 1){
             $('#presentTen').hide();
             score++;
-            $('.myScore').html(score+" / 10");
+            $('.myScore').html(score + "/10");
         }
     });
-
-
 });
