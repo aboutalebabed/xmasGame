@@ -114,8 +114,6 @@ h1 {
     background: rgba(0,0,0,0.95);
     z-index: 10000;
 }
-
-
 .counter-box{
     display: none;
     text-align: center;
@@ -129,7 +127,10 @@ h1 {
     background: rgba(0,0,0,0.4);
     z-index: 10000;
 }
-
+.farAway{
+    position: absolute;
+    top: -10000px;
+}
 
 .messageText {
     margin: 160px 0 50px 0;
