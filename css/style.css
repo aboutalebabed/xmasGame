@@ -175,3 +175,37 @@ h1 {
     font-weight: bolder;
     font-size: 100px;
 }
+#scoreBoard {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: black;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+#scoreCounter {
+    font-size: 25px;
+}
+#winScoreBox {
+    display: flex;
+    position: absolute;
+    z-index: 10000;
+    top: 400px;
+    left: 47%;
+}
+#looseScoreBox {
+    display: flex;
+    position: absolute;
+    z-index: 10000;
+    top: 400px;
+    left: 47%;
+}
+#looseScoreBox>p {
+    font-size: 30px;
+    color: #00ddff;
+}
+#winScoreBox>p {
+    font-size: 30px;
+    color: lawngreen;
+}

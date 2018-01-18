@@ -37,8 +37,13 @@
 	<li></li>
 	<li></li>
 	</ul>
-	<!--C Lights in Game Container  END here-->	
-
+	<!--C Lights in Game Container  END here-->
+        <div id="scoreBoard">
+            <h2>
+                SCORE:
+            </h2>
+            <p id="scoreCounter">0</p>
+        </div>
 		<?xml version="1.0" encoding="utf-8"?>
 		<svg class="gamePath startPoint" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="800px" height="4000px" viewBox="0 0 800 4000" style="enable-background:new 0 0 800 4000;" xml:space="preserve">
 
@@ -60,17 +65,17 @@
 
              <!-- Presents on Path -->
             <g class="Presents">
-                <image style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 359 459)"></image>
-                <image style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 275 661)"></image>
-                <image style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 384 1357)"></image>
-                <image style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 258.4885 1515)"></image>
-                <image style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 352 1685)"></image>
-                <image style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 411.8274 1913)"></image>
-                <image style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 227 2284.9082)"></image>
-                <image style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 352 2379)"></image>
-                <image style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 363.6586 2925)"></image>
-                <image style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 240 3154)"></image>
-                <image style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 376 3282.604)"></image>
+                <image id="p1" style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 359 459)"></image>
+                <image id="p2" style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 275 661)"></image>
+                <image id="p3" style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 384 1357)"></image>
+                <image id="p4" style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 258.4885 1515)"></image>
+                <image id="p5" style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 352 1685)"></image>
+                <image id="p6" style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 411.8274 1913)"></image>
+                <image id="p7" style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 227 2284.9082)"></image>
+                <image id="p8" style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 352 2379)"></image>
+                <image id="p9" style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 363.6586 2925)"></image>
+                <image id="p10" style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 240 3154)"></image>
+                <image id="p11" style="overflow:visible;" width="200" height="230" xlink:href="images/presents.png"  transform="matrix(0.24 0 0 0.24 376 3282.604)"></image>
             </g>
 
             <!-- Obstacles on Path -->
@@ -118,6 +123,10 @@
 <!-- Messages -->
 <div id="lose-box" class="message-box">
 	<p class="messageText lose">YOU LOSE!</p>
+    <div id="looseScoreBox">
+        <p id="looseFinalScore"></p>
+        <p> / 11</p>
+    </div>
 	<button class="button loseButton stop-animation">Try again!</button>
 </div>
 <div id="win-box" class="message-box">
@@ -125,6 +134,10 @@
     <div class="pyro">
         <div class="before"></div>
         <div class="after"></div>
+    </div>
+    <div id="winScoreBox">
+        <p id="winFinalScore"></p>
+        <p> / 11</p>
     </div>
 	<button class="button winButton stop-animation">Play again!</button>
 </div>
