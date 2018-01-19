@@ -3,7 +3,7 @@ $(document).ready(function(){
     var startPlay = 0;
 
     //The Start Countdown
-    $("#start-line").one("mouseenter", function() {
+    $("#start-line").mouseenter(function() {
         $("#counter").show();
         setTimeout(function () {$("#counter_content").text("3");},1000);
         setTimeout(function () {$("#counter_content").text("2");},2000);
