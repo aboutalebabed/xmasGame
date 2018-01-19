@@ -1,19 +1,20 @@
 $(document).ready(function(){
-
     var startPlay = 0;
     var score = 0;
 
     //The Start Countdown
     $("#start-line").mouseenter(function() {
-        $("#counter").show();
-        setTimeout(function () {$("#counter_content").text("3");},1000);
-        setTimeout(function () {$("#counter_content").text("2");},2000);
-        setTimeout(function () {$("#counter_content").text("1");},3000);
-        setTimeout(function () {
-            $("#counter_content").text("");//Clear all content in div
-            $("#counter").hide();
-            runTheGame();
-        },4000);
+        if (startPlay != 1){
+            $("#counter").show();
+            setTimeout(function () {$("#counter_content").text("3");},1000);
+            setTimeout(function () {$("#counter_content").text("2");},2000);
+            setTimeout(function () {$("#counter_content").text("1");},3000);
+            setTimeout(function () {
+                $("#counter_content").text("");//Clear all content in div
+                $("#counter").hide();
+                runTheGame();
+            },4000);
+        }
     });
 
     //The player Starts the Game
@@ -36,7 +37,10 @@ $(document).ready(function(){
             $(".path-animation").css("animation-play-state", "paused");
             var audio = new Audio('sound/error-sound.mp3');
             audio.play();
-            document.getElementById('looseFinalScore').innerHTML = 'Your score was ' +  score + ' / 10';
+            $("#looseFinalScore").text('Your score was ' +  score + ' / 10');
+
+            /* Classic Javascript */
+            /*document.getElementById('looseFinalScore').innerHTML = 'Your score was ' +  score + ' / 10';*/
         }
         startPlay = 0;
     });
@@ -47,7 +51,10 @@ $(document).ready(function(){
             $("#win-box").show();
             var audio = new Audio('sound/win-sound.mp3');
             audio.play();
-            document.getElementById('winFinalScore').innerHTML = 'Your score was ' +  score + ' / 10';
+            $("#winFinalScore").text('Your score was ' +  score + ' / 10');
+
+            /* Classic Javascript */
+            /*document.getElementById('winFinalScore').innerHTML = 'Your score was ' +  score + ' / 10';*/
         }
     });
 
@@ -112,7 +119,10 @@ $(document).ready(function(){
     });
 
     function displayScore() {
-        document.getElementById('scoreCounter').innerHTML = score + ' / 10';
+        $("#scoreCounter").text(score + ' / 10');
+
+        /* Classic Javascript */
+        /*document.getElementById('scoreCounter').innerHTML = score + ' / 10';*/
     }
 });
 
