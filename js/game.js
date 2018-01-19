@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
     var startPlay = 0;
+    var score = 0;
 
     //The Start Countdown
     $("#start-line").mouseenter(function() {
@@ -33,6 +34,7 @@ $(document).ready(function(){
             $(".path-animation").css("animation-play-state", "paused");
             var audio = new Audio('sound/error-sound.mp3');
             audio.play();
+            document.getElementById('looseFinalScore').innerHTML = 'Your score was ' +  score + ' / 10';
         }
         startPlay = 0;
     });
@@ -43,6 +45,72 @@ $(document).ready(function(){
             $("#win-box").show();
             var audio = new Audio('sound/win-sound.mp3');
             audio.play();
+            document.getElementById('winFinalScore').innerHTML = 'Your score was ' +  score + ' / 10';
         }
     });
+
+    $('#p1').mouseenter(function(){
+        $('#p1').hide();
+        score++;
+        displayScore();
+    });
+
+    $('#p2').mouseenter(function(){
+        $('#p2').hide();
+        score++;
+        displayScore();
+    });
+
+    $('#p3').mouseenter(function(){
+        $('#p3').hide();
+        score++;
+        displayScore();
+    });
+
+    $('#p4').mouseenter(function(){
+        $('#p4').hide();
+        score++;
+        displayScore();
+    });
+
+    $('#p5').mouseenter(function(){
+        $('#p5').hide();
+        score++;
+        displayScore();
+    });
+
+    $('#p6').mouseenter(function(){
+        $('#p6').hide();
+        score++;
+        displayScore();
+    });
+
+    $('#p7').mouseenter(function(){
+        $('#p7').hide();
+        score++;
+        displayScore();
+    });
+
+    $('#p8').mouseenter(function(){
+        $('#p8').hide();
+        score++;
+        displayScore();
+    });
+
+    $('#p9').mouseenter(function(){
+        $('#p9').hide();
+        score++;
+        displayScore();
+    });
+
+    $('#p10').mouseenter(function(){
+        $('#p10').hide();
+        score++;
+        displayScore();
+    });
+
+    function displayScore() {
+        document.getElementById('scoreCounter').innerHTML = score + ' / 10';
+    }
 });
+
