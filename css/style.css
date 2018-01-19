@@ -6,7 +6,7 @@ body {
     background-attachment: fixed;
     background-position: center;
     color: #fff;
-
+    overflow: hidden;
     font-family: Arial;
 }
 
@@ -133,7 +133,7 @@ h1 {
 }
 
 .messageText {
-    margin: 160px 0 50px 0;
+    margin: 160px 0 20px 0;
     text-align: center;
     font-weight: bolder;
     font-size: 100px;
@@ -175,43 +175,41 @@ h1 {
     font-weight: bolder;
     font-size: 100px;
 }
+
+
+
+/* Scores */
+
 #scoreBoard {
     position: absolute;
-    top: 15px;
-    left: 15px;
-    color: black;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
+    width: 80px;
+    height: 25px;
+    right: 0;
+    bottom: 0;
+    margin: 20px;
+    background-color: #333333;
+    z-index: 1;
+    display: inline-block;
 }
 #scoreCounter {
-    font-size: 25px;
+    float: left;
+    padding: 3px;
+    margin: 0;
 }
-#winScoreBox {
-    display: flex;
-    position: absolute;
-    z-index: 10000;
-    top: 400px;
-    left: 45%;
+
+
+#scoreBoard img {
+    float: left;
+    width:15px;
+    height: 18px;
+    padding: 3px 5px;
 }
-#winScoreBox>p:first-of-type {
-    margin-right: 8px;
-}
-#winScoreBox>p {
-    font-size: 30px;
-    color: lawngreen;
-}
-#looseScoreBox {
-    display: flex;
-    position: absolute;
-    z-index: 10000;
-    top: 400px;
-    left: 45%;
-}
-#looseScoreBox>p:first-of-type {
-    margin-right: 8px;
-}
-#looseScoreBox>p {
-    font-size: 30px;
-    color: red;
+
+
+#winFinalScore,
+#looseFinalScore
+{
+    color: white;
+    font-size: 28px;
+    text-align: center;
 }

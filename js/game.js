@@ -34,7 +34,7 @@ $(document).ready(function(){
             $(".path-animation").css("animation-play-state", "paused");
             var audio = new Audio('sound/error-sound.mp3');
             audio.play();
-            document.getElementById('looseFinalScore').innerHTML = score;
+            document.getElementById('looseFinalScore').innerHTML = 'Your score was ' +  score + ' / 10';
         }
         startPlay = 0;
     });
@@ -45,7 +45,7 @@ $(document).ready(function(){
             $("#win-box").show();
             var audio = new Audio('sound/win-sound.mp3');
             audio.play();
-            document.getElementById('winFinalScore').innerHTML = score;
+            document.getElementById('winFinalScore').innerHTML = 'Your score was ' +  score + ' / 10';
         }
     });
 
@@ -109,13 +109,8 @@ $(document).ready(function(){
         displayScore();
     });
 
-    $('#p11').mouseenter(function(){
-        $('#p11').hide();
-        score++;
-        displayScore();
-    });
     function displayScore() {
-        document.getElementById('scoreCounter').innerHTML = score;
+        document.getElementById('scoreCounter').innerHTML = score + ' / 10';
     }
 });
 
