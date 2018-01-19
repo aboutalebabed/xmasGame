@@ -19,7 +19,9 @@ $(document).ready(function(){
     //The player Starts the Game
     function runTheGame(){
         startPlay = 1;
-        $('.gamePath').attr('class', 'gamePath path-animation');
+        $("#gameContainer").mouseenter(function () {
+            $('.gamePath').attr('class', 'gamePath path-animation');
+        });
     }
 
     // Reloads the Page.
