@@ -192,7 +192,7 @@ h1 {
     position: absolute;
     z-index: 10000;
     top: 400px;
-    left: 40%;
+    left: 45%;
 }
 #winScoreBox>p:first-of-type {
     margin-right: 8px;
